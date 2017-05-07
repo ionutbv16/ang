@@ -1,4 +1,6 @@
-# Ang2
+# Angular 2 Shopping cart
+
+# Live app : http://angular2.placeinuk.info/ 
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
