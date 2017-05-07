@@ -1,0 +1,19 @@
+<div class="panel panel-default"  >
+  <div class="panel-body">
+    <div class="row">
+    	<div *ngFor="let post of posts; let i = index">
+    		<div class="col-md-6">
+    			<div class="col-md-6">
+    				<h4>{{post.label}}</h4>
+    				<p>{{post.ref}}</p>
+            <p>{{post.cost}}</p>
+    				<a class="btn btn-primary" href="/items/{{post.ref}}">View Details</a>
+    			</div>
+    			<div class="col-md-6">
+    				<img class="thumbnail" width='250'  src="{{post.image}}">
+    			</div>
+    		</div>
+    	</div>
+    </div>
+  </div>
+</div>

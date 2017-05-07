@@ -1,0 +1,53 @@
+  <div class="panel-body">
+
+<div class="container">
+    	<table id="cart" class="table table-hover table-condensed">
+        				<thead>
+    						<tr>
+    							<th style="width:50%">Product - Reference</th>
+    							<th style="width:10%">Price</th>
+    							<th style="width:8%">Quantity</th>
+    							<th style="width:22%" class="text-center">Subtotal</th>
+    							<th style="width:10%"></th>
+    						</tr>
+    					</thead>
+
+             <tbody  >
+
+            	 	<tr *ngFor="let item of cartItems">
+    							<td data-th="Product">
+    								<div class="row">
+    									<div class="col-sm-10">
+    										<h4 class="nomargin">{{item.label}} - {{item.reference}}</h4>
+
+    									</div>
+    								</div>
+    							</td>
+    							<td data-th="Price">{{item.cost}}</td>
+    							<td data-th="Quantity">
+    								<input type="number" class="form-control text-center" value="1" [(ngModel)]="item.qty" #qty>
+    							</td>
+    							<td data-th="Subtotal" class="text-center">{{item.cost * item.qty}}</td>
+    							<td class="actions" data-th="">
+    								<button class="btn btn-info btn-sm" (click)="refreshCart(item.reference,qty.value)">Refresh Quantity</button>
+    								<button class="btn btn-danger btn-sm" (click)="deleteCart(item.reference)">Delete</button>
+    							</td>
+    						</tr>
+    					</tbody>  
+
+
+    					<tfoot>
+    						<tr class="visible-xs">
+    							<td class="text-center"><strong>Total  </strong></td>
+    						</tr>
+    						<tr>
+    							<td><a routerLink="/" class="btn btn-warning">  Continue Shopping</a></td>
+    							<td colspan="2" class="hidden-xs"></td>
+    							<td class="hidden-xs text-center"><strong>Total {{total}}</strong></td>
+    							<td><a class="btn btn-success btn-block" (click)="checkoutCart()">Checkout  </a></td>
+    						</tr>
+    					</tfoot>
+    				</table>
+    </div>
+
+    </div>

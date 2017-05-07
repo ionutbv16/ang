@@ -1,0 +1,23 @@
+<div class="panel panel-default" >
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{{post.image}}" width='300'  >
+      </div>
+      <div class="col-md-8">
+        <p>{{post.description}}</p>
+        <ul class="list-group">
+          <li class="list-group-item">Reference: {{post.reference}}</li>
+          <li class="list-group-item">Cost: {{post.cost}}</li>
+          <li class="list-group-item">Brand: {{post.brand}}</li>
+          <li class="list-group-item">Model: {{post.model}}</li>
+          <li class="list-group-item">Description: {{post.description}}</li>
+          <li class="list-group-item">Iitems Available: {{post.items_available}}</li>
+        </ul>
+        <a href="/addcart/details/{{post.reference}}" class="btn btn-primary">Add to cart</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
